@@ -1,0 +1,43 @@
+public static void main(String[] args) {
+
+        Sort lab = new Sort();
+
+        ArrayList <Comparable> list = lab.initializeList();
+        ArrayList <Comparable> copy = lab.duplicate(list);
+
+        System.out.println("Before Bubble Sort:");
+        System.out.println(list);
+
+        lab.bubbleSort(list);	// runs your Bubble Sort code
+        Collections.sort(copy);	// runs built-in sorting code
+        Collections.reverse(copy);
+
+        System.out.println("After Bubble Sort:");
+        System.out.println(list);
+        System.out.println(copy.toString().equals(list.toString()) ? "CORRECT" : "NOT SORTED PROPERLY");
+
+        list = lab.initializeList();
+        copy = lab.duplicate(list);
+        System.out.println("\nBefore Selection Sort:");
+        System.out.println(list);
+
+        lab.selectionSort(list);	// runs your Selection Sort code
+        Collections.sort(copy);		// runs built-in sorting code
+
+        System.out.println("After Selection Sort:");
+        System.out.println(list);
+        System.out.println(copy.toString().equals(list.toString()) ? "CORRECT" : "NOT SORTED PROPERLY");
+
+        list = lab.initializeList();
+        copy = lab.duplicate(list);
+        System.out.println("\nBefore Insertion Sort:");
+        System.out.println(list);
+
+        lab.insertionSort(list);	// runs your Insertion Sort code
+        Collections.sort(copy);		// runs built-in sorting code
+        Collections.reverse(copy);
+
+        System.out.println("After Insertion Sort:");
+        System.out.println(list);
+        System.out.println(copy.toString().equals(list.toString()) ? "CORRECT" : "NOT SORTED PROPERLY");
+    }
